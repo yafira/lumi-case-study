@@ -1,328 +1,964 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumi — Case Study by Yafira Martinez</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumi — Case Study by Yafira Martinez</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <nav id="nav">
-    <a href="#" class="nav-brand">Lumi</a>
-    <div class="nav-right">
-      <a href="#insight">Insight</a>
-      <a href="#app">App</a>
-      <a href="#design">Design</a>
-      <a href="#hardware">Hardware</a>
-      <a href="https://lumi-wearable.vercel.app" target="_blank" class="live">Open prototype ↗</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-kicker reveal">Speculative wearable concept + companion app</div>
-      <div class="hero-title reveal d1">Lu<em>mi</em></div>
-      <div class="hero-tagline reveal d2">Your body knows before you do.</div>
-      <div class="hero-tags reveal d3">
-        <span class="hero-tag-item" style="background:var(--lavender);border-color:var(--lavender-mid);color:var(--lavender-deep);">Mobile</span>
-        <span class="hero-tag-item" style="background:var(--lavender);border-color:var(--lavender-mid);color:var(--lavender-deep);">Wearable</span>
-        <span class="hero-tag-item" style="background:var(--blush);border-color:#F2C4C4;color:#C05070;">Women's Health</span>
-        <span class="hero-tag-item" style="background:var(--mint);border-color:#B8DDD4;color:#2A8060;">Design Concept</span>
-        <span class="hero-tag-item">2026</span>
+    <nav id="nav">
+      <a href="#" class="nav-brand">Lumi</a>
+      <div class="nav-right">
+        <a href="#insight">Insight</a>
+        <a href="#process">Process</a>
+        <a href="#app">App</a>
+        <a href="#design">Design</a>
+        <a href="#hardware">Hardware</a>
+        <a href="https://lumi-wearable.vercel.app" target="_blank" class="live"
+          >Open prototype ↗</a
+        >
       </div>
-    </div>
+    </nav>
 
-    <div class="hero-phone reveal d2">
-      <div class="hero-phone-frame">
-        <div style="background:var(--cream);padding:22px 16px 16px;min-height:380px;display:flex;flex-direction:column;position:relative;">
-          <div style="display:flex;justify-content:space-between;margin-bottom:16px;">
-            <span style="font-family:var(--f-mono);font-size:10px;color:var(--black);">9:41</span>
-            <span style="font-family:var(--f-mono);font-size:9px;color:var(--grey-light);">▲ ●</span>
-          </div>
-          <div style="font-family:var(--f-display);font-size:17px;font-weight:300;color:var(--black);margin-bottom:12px;">Good morning, Yafira</div>
-          <div style="background:var(--black);border-radius:18px;padding:14px;margin-bottom:10px;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:-16px;right:-16px;width:64px;height:64px;background:radial-gradient(circle,rgba(212,188,255,0.25),transparent);border-radius:50%;"></div>
-            <div style="font-family:var(--f-mono);font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:8px;">Signal right now</div>
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-              <div style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--lavender-mid),var(--lavender-deep));flex-shrink:0;box-shadow:0 0 12px rgba(155,127,212,0.5);"></div>
-              <div style="font-family:var(--f-display);font-size:13px;font-weight:300;color:rgba(255,255,255,0.9);line-height:1.2;">Feeling calm.<br>All clear.</div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker reveal">
+          Speculative wearable concept + companion app
+        </div>
+        <div class="hero-title reveal d1">Lu<em>mi</em></div>
+        <div class="hero-tagline reveal d2">Your body knows before you do.</div>
+        <div class="hero-tags reveal d3">
+          <span
+            class="hero-tag-item"
+            style="
+              background: var(--lavender);
+              border-color: var(--lavender-mid);
+              color: var(--lavender-deep);
+            "
+            >Mobile</span
+          >
+          <span
+            class="hero-tag-item"
+            style="
+              background: var(--lavender);
+              border-color: var(--lavender-mid);
+              color: var(--lavender-deep);
+            "
+            >Wearable</span
+          >
+          <span
+            class="hero-tag-item"
+            style="
+              background: var(--blush);
+              border-color: #f2c4c4;
+              color: #c05070;
+            "
+            >Women's Health</span
+          >
+          <span
+            class="hero-tag-item"
+            style="
+              background: var(--mint);
+              border-color: #b8ddd4;
+              color: #2a8060;
+            "
+            >Design Concept</span
+          >
+          <span class="hero-tag-item">2026</span>
+        </div>
+      </div>
+
+      <div class="hero-phone reveal d2">
+        <div class="hero-phone-frame">
+          <div
+            style="
+              background: var(--cream);
+              padding: 22px 16px 16px;
+              min-height: 380px;
+              display: flex;
+              flex-direction: column;
+              position: relative;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 16px;
+              "
+            >
+              <span
+                style="
+                  font-family: var(--f-mono);
+                  font-size: 10px;
+                  color: var(--black);
+                "
+                >9:41</span
+              >
+              <span
+                style="
+                  font-family: var(--f-mono);
+                  font-size: 9px;
+                  color: var(--grey-light);
+                "
+                >▲ ●</span
+              >
             </div>
-            <div style="display:flex;padding-top:8px;border-top:1px solid rgba(255,255,255,0.06);">
-              <div style="flex:1;text-align:center;"><div style="font-family:var(--f-display);font-size:13px;font-weight:300;color:rgba(255,255,255,0.85);">72</div><div style="font-family:var(--f-mono);font-size:7px;color:rgba(255,255,255,0.3);letter-spacing:0.08em;text-transform:uppercase;">HRV</div></div>
-              <div style="flex:1;text-align:center;border-left:1px solid rgba(255,255,255,0.06);"><div style="font-family:var(--f-display);font-size:13px;font-weight:300;color:rgba(255,255,255,0.85);">36.6°</div><div style="font-family:var(--f-mono);font-size:7px;color:rgba(255,255,255,0.3);letter-spacing:0.08em;text-transform:uppercase;">Temp</div></div>
-              <div style="flex:1;text-align:center;border-left:1px solid rgba(255,255,255,0.06);"><div style="font-family:var(--f-display);font-size:13px;font-weight:300;color:rgba(255,255,255,0.85);">Low</div><div style="font-family:var(--f-mono);font-size:7px;color:rgba(255,255,255,0.3);letter-spacing:0.08em;text-transform:uppercase;">Risk</div></div>
+            <div
+              style="
+                font-family: var(--f-display);
+                font-size: 17px;
+                font-weight: 300;
+                color: var(--black);
+                margin-bottom: 12px;
+              "
+            >
+              Good morning, Yafira
             </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;flex:1;">
-            <div style="background:var(--lavender);border-radius:12px;padding:10px;"><div style="font-family:var(--f-display);font-size:16px;font-weight:300;color:var(--black);">7.2h</div><div style="font-family:var(--f-mono);font-size:8px;color:var(--grey);">Sleep</div></div>
-            <div style="background:var(--blush);border-radius:12px;padding:10px;"><div style="font-family:var(--f-display);font-size:16px;font-weight:300;color:var(--black);">1.8L</div><div style="font-family:var(--f-mono);font-size:8px;color:var(--grey);">Hydration</div></div>
-            <div style="background:var(--mint);border-radius:12px;padding:10px;"><div style="font-family:var(--f-display);font-size:16px;font-weight:300;color:var(--black);">Low</div><div style="font-family:var(--f-mono);font-size:8px;color:var(--grey);">Stress</div></div>
-            <div style="background:var(--cream-deep);border-radius:12px;padding:10px;"><div style="font-family:var(--f-display);font-size:16px;font-weight:300;color:var(--black);">Day 14</div><div style="font-family:var(--f-mono);font-size:8px;color:var(--grey);">Cycle</div></div>
-          </div>
-          <div style="display:flex;justify-content:space-around;padding-top:12px;margin-top:10px;border-top:0.5px solid var(--border);">
-            <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--lavender-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-              <span style="font-family:var(--f-mono);font-size:7px;letter-spacing:0.08em;text-transform:uppercase;color:var(--lavender-deep);">Home</span>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--grey-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              <span style="font-family:var(--f-mono);font-size:7px;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey-light);">Patterns</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-phone-label">companion app</div>
-    </div>
-
-    <div class="hero-wearable reveal d3">
-      <div class="hero-wearable-frame">
-        <img src="assets/aurainuse3.png" alt="Aura hair clip in use" class="hero-wearable-img">
-      </div>
-      <div class="hero-wearable-label">Aura — hair clip</div>
-    </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="ticker">
-    <div class="ticker-track">
-      <span>Early Warning System</span><span class="ticker-sep">+</span>
-      <span>HRV Biosensing</span><span class="ticker-sep">+</span>
-      <span>For Women by a Woman</span><span class="ticker-sep">+</span>
-      <span>Aura · Halo · Nimbus</span><span class="ticker-sep">+</span>
-      <span>Early Warning System</span><span class="ticker-sep">+</span>
-      <span>HRV Biosensing</span><span class="ticker-sep">+</span>
-      <span>For Women by a Woman</span><span class="ticker-sep">+</span>
-      <span>Aura · Halo · Nimbus</span><span class="ticker-sep">+</span>
-      <span>Early Warning System</span><span class="ticker-sep">+</span>
-      <span>HRV Biosensing</span><span class="ticker-sep">+</span>
-      <span>For Women by a Woman</span><span class="ticker-sep">+</span>
-      <span>Aura · Halo · Nimbus</span><span class="ticker-sep">+</span>
-    </div>
-  </div>
-
-  <!-- INSIGHT -->
-  <section id="insight" class="cs-section">
-    <div class="cs-section-inner">
-      <div class="cs-label reveal">01 — Insight</div>
-      <h2 class="cs-heading reveal d1">Migraines don't arrive without warning.<br><em>We just don't know how to listen.</em></h2>
-      <div class="cs-body-cols">
-        <p class="cs-body reveal d2">Migraines affect over 1 billion people worldwide. Women are 3.25× more likely to experience them than men — yet most detection tools are reactive, designed around pain that has already begun. Lumi starts from a different premise: your body signals a migraine hours before it arrives. The prodrome phase — marked by subtle shifts in heart rate variability, skin temperature, and cortisol — is a window where early action can prevent or reduce the severity of an attack.</p>
-        <p class="cs-body reveal d3">This project began personally. I've had migraines since I was a teenager and always noticed small signs hours before — a stiffness in the neck, an unusual sensitivity to light, a drop in focus that felt different from tiredness. I wanted to build something that could read those signs so I didn't have to consciously track them. Lumi is the result: a wearable biosensor and companion app designed to detect the prodrome window and give you time to act.</p>
-      </div>
-      <div class="cs-stats reveal d2">
-        <div class="cs-stat">
-          <div class="cs-stat-val">3.25×</div>
-          <div class="cs-stat-label">more likely in women</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-val">1B+</div>
-          <div class="cs-stat-label">people affected globally</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-val">4–72h</div>
-          <div class="cs-stat-label">prodrome window before onset</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-val">#4</div>
-          <div class="cs-stat-label">leading cause of disability worldwide</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APP -->
-  <section id="app" class="cs-section cs-section--dark">
-    <div class="cs-section-inner">
-      <div class="cs-label reveal" style="color:rgba(255,255,255,0.35);">02 — App</div>
-      <h2 class="cs-heading reveal d1" style="color:rgba(255,255,255,0.95);">A companion app that reads<br><em>what you can't.</em></h2>
-      <p class="cs-body reveal d2" style="color:rgba(255,255,255,0.5);">The Lumi app connects to your Aura clip via Bluetooth and translates raw biosensor data into a single, calm signal. No overwhelming dashboards — just a clear picture of where you are and what to do if the signal rises.</p>
-      <div class="app-screens reveal d2">
-        <div class="app-screen-card">
-          <div class="app-screen-phone">
-            <img src="assets/aurainuse3.png" alt="Lumi welcome screen" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
-          </div>
-          <div class="app-screen-label">Onboarding</div>
-          <div class="app-screen-sub">Clip placement, trigger mapping</div>
-        </div>
-        <div class="app-screen-card app-screen-card--featured">
-          <div class="app-screen-phone app-screen-phone--dark">
-            <div style="padding:20px 14px;height:100%;display:flex;flex-direction:column;gap:10px;">
-              <div style="font-family:'Departure Mono',monospace;font-size:8px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3);">Your signal right now</div>
-              <div style="display:flex;align-items:center;gap:10px;flex:1;">
-                <div style="width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#D4BCFF,#9B7FD4);flex-shrink:0;box-shadow:0 0 20px rgba(155,127,212,0.6);animation:pulseOrb 3s ease-in-out infinite;"></div>
-                <div>
-                  <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:300;color:rgba(255,255,255,0.95);line-height:1.2;">Feeling calm.<br>All clear.</div>
+            <div
+              style="
+                background: var(--black);
+                border-radius: 18px;
+                padding: 14px;
+                margin-bottom: 10px;
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  top: -16px;
+                  right: -16px;
+                  width: 64px;
+                  height: 64px;
+                  background: radial-gradient(
+                    circle,
+                    rgba(212, 188, 255, 0.25),
+                    transparent
+                  );
+                  border-radius: 50%;
+                "
+              ></div>
+              <div
+                style="
+                  font-family: var(--f-mono);
+                  font-size: 8px;
+                  letter-spacing: 0.15em;
+                  text-transform: uppercase;
+                  color: rgba(255, 255, 255, 0.3);
+                  margin-bottom: 8px;
+                "
+              >
+                Signal right now
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  margin-bottom: 10px;
+                "
+              >
+                <div
+                  style="
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    background: radial-gradient(
+                      circle at 35% 35%,
+                      var(--lavender-mid),
+                      var(--lavender-deep)
+                    );
+                    flex-shrink: 0;
+                    box-shadow: 0 0 12px rgba(155, 127, 212, 0.5);
+                  "
+                ></div>
+                <div
+                  style="
+                    font-family: var(--f-display);
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: rgba(255, 255, 255, 0.9);
+                    line-height: 1.2;
+                  "
+                >
+                  Feeling calm.<br />All clear.
                 </div>
               </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
-                <div style="background:rgba(237,228,255,0.12);border-radius:10px;padding:8px;"><div style="font-family:'Fraunces',serif;font-size:15px;color:white;">7.2h</div><div style="font-family:'Departure Mono',monospace;font-size:7px;color:rgba(255,255,255,0.35);text-transform:uppercase;">Sleep</div></div>
-                <div style="background:rgba(255,232,240,0.1);border-radius:10px;padding:8px;"><div style="font-family:'Fraunces',serif;font-size:15px;color:white;">1.8L</div><div style="font-family:'Departure Mono',monospace;font-size:7px;color:rgba(255,255,255,0.35);text-transform:uppercase;">Hydration</div></div>
+              <div
+                style="
+                  display: flex;
+                  padding-top: 8px;
+                  border-top: 1px solid rgba(255, 255, 255, 0.06);
+                "
+              >
+                <div style="flex: 1; text-align: center">
+                  <div
+                    style="
+                      font-family: var(--f-display);
+                      font-size: 13px;
+                      font-weight: 300;
+                      color: rgba(255, 255, 255, 0.85);
+                    "
+                  >
+                    72
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--f-mono);
+                      font-size: 7px;
+                      color: rgba(255, 255, 255, 0.3);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                    "
+                  >
+                    HRV
+                  </div>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    text-align: center;
+                    border-left: 1px solid rgba(255, 255, 255, 0.06);
+                  "
+                >
+                  <div
+                    style="
+                      font-family: var(--f-display);
+                      font-size: 13px;
+                      font-weight: 300;
+                      color: rgba(255, 255, 255, 0.85);
+                    "
+                  >
+                    36.6°
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--f-mono);
+                      font-size: 7px;
+                      color: rgba(255, 255, 255, 0.3);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Temp
+                  </div>
+                </div>
+                <div
+                  style="
+                    flex: 1;
+                    text-align: center;
+                    border-left: 1px solid rgba(255, 255, 255, 0.06);
+                  "
+                >
+                  <div
+                    style="
+                      font-family: var(--f-display);
+                      font-size: 13px;
+                      font-weight: 300;
+                      color: rgba(255, 255, 255, 0.85);
+                    "
+                  >
+                    Low
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--f-mono);
+                      font-size: 7px;
+                      color: rgba(255, 255, 255, 0.3);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Risk
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                flex: 1;
+              "
+            >
+              <div
+                style="
+                  background: var(--lavender);
+                  border-radius: 12px;
+                  padding: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--f-display);
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: var(--black);
+                  "
+                >
+                  7.2h
+                </div>
+                <div
+                  style="
+                    font-family: var(--f-mono);
+                    font-size: 8px;
+                    color: var(--grey);
+                  "
+                >
+                  Sleep
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--blush);
+                  border-radius: 12px;
+                  padding: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--f-display);
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: var(--black);
+                  "
+                >
+                  1.8L
+                </div>
+                <div
+                  style="
+                    font-family: var(--f-mono);
+                    font-size: 8px;
+                    color: var(--grey);
+                  "
+                >
+                  Hydration
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--mint);
+                  border-radius: 12px;
+                  padding: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--f-display);
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: var(--black);
+                  "
+                >
+                  Low
+                </div>
+                <div
+                  style="
+                    font-family: var(--f-mono);
+                    font-size: 8px;
+                    color: var(--grey);
+                  "
+                >
+                  Stress
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--cream-deep);
+                  border-radius: 12px;
+                  padding: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-family: var(--f-display);
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: var(--black);
+                  "
+                >
+                  Day 14
+                </div>
+                <div
+                  style="
+                    font-family: var(--f-mono);
+                    font-size: 8px;
+                    color: var(--grey);
+                  "
+                >
+                  Cycle
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-around;
+                padding-top: 12px;
+                margin-top: 10px;
+                border-top: 0.5px solid var(--border);
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 3px;
+                "
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--lavender-deep)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                </svg>
+                <span
+                  style="
+                    font-family: var(--f-mono);
+                    font-size: 7px;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: var(--lavender-deep);
+                  "
+                  >Home</span
+                >
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 3px;
+                "
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--grey-light)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+                <span
+                  style="
+                    font-family: var(--f-mono);
+                    font-size: 7px;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: var(--grey-light);
+                  "
+                  >Patterns</span
+                >
               </div>
             </div>
           </div>
-          <div class="app-screen-label" style="color:rgba(255,255,255,0.9);">Dashboard</div>
-          <div class="app-screen-sub" style="color:rgba(255,255,255,0.4);">Live signal, daily vitals</div>
         </div>
-        <div class="app-screen-card">
-          <div class="app-screen-phone app-screen-phone--warning">
-            <div style="padding:20px 14px;height:100%;display:flex;flex-direction:column;gap:10px;">
-              <div style="display:inline-flex;align-items:center;gap:5px;background:#FFF3E0;border:1px solid #FFB74D;border-radius:100px;padding:4px 10px;width:fit-content;">
-                <div style="width:5px;height:5px;border-radius:50%;background:#BF5500;"></div>
-                <span style="font-family:'Departure Mono',monospace;font-size:8px;color:#BF5500;">Early warning</span>
-              </div>
-              <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:300;color:#0D0D0D;line-height:1.1;">A migraine<br>may be <em style="color:#9B7FD4;">coming.</em></div>
-              <div style="font-family:'Departure Mono',monospace;font-size:10px;color:#8A8480;line-height:1.5;">HRV dropped 18%.<br>Migraine likely in 3–5 hrs.</div>
-              <div style="background:#F5EFE3;border-radius:10px;padding:10px;">
-                <div style="font-family:'Departure Mono',monospace;font-size:8px;text-transform:uppercase;color:#8A8480;margin-bottom:8px;">Onset window</div>
-                <div style="height:4px;background:#E0D8CC;border-radius:100px;overflow:hidden;"><div style="width:55%;height:100%;background:linear-gradient(90deg,#D4BCFF,#9B7FD4);border-radius:100px;"></div></div>
+        <div class="hero-phone-label">companion app</div>
+      </div>
+
+      <div class="hero-wearable reveal d3">
+        <div class="hero-wearable-frame">
+          <img
+            src="assets/aurainuse3.png"
+            alt="Aura hair clip in use"
+            class="hero-wearable-img"
+          />
+        </div>
+        <div class="hero-wearable-label">Aura — hair clip</div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>Early Warning System</span><span class="ticker-sep">+</span>
+        <span>HRV Biosensing</span><span class="ticker-sep">+</span>
+        <span>For Women by a Woman</span><span class="ticker-sep">+</span>
+        <span>Aura · Halo · Nimbus</span><span class="ticker-sep">+</span>
+        <span>Early Warning System</span><span class="ticker-sep">+</span>
+        <span>HRV Biosensing</span><span class="ticker-sep">+</span>
+        <span>For Women by a Woman</span><span class="ticker-sep">+</span>
+        <span>Aura · Halo · Nimbus</span><span class="ticker-sep">+</span>
+        <span>Early Warning System</span><span class="ticker-sep">+</span>
+        <span>HRV Biosensing</span><span class="ticker-sep">+</span>
+        <span>For Women by a Woman</span><span class="ticker-sep">+</span>
+        <span>Aura · Halo · Nimbus</span><span class="ticker-sep">+</span>
+      </div>
+    </div>
+
+    <!-- INSIGHT -->
+    <section id="insight" class="cs-section">
+      <div class="cs-section-inner">
+        <div class="cs-label reveal">01 — Insight</div>
+        <h2 class="cs-heading reveal d1">
+          Migraines don't arrive without warning.<br /><em
+            >We just don't know how to listen.</em
+          >
+        </h2>
+        <div class="cs-body-cols">
+          <p class="cs-body reveal d2">
+            Migraines affect over 1 billion people worldwide. Women are 3.25×
+            more likely to experience them than men — yet most detection tools
+            are reactive, designed around pain that has already begun. Lumi
+            starts from a different premise: your body signals a migraine hours
+            before it arrives. The prodrome phase — marked by subtle shifts in
+            heart rate variability, skin temperature, and cortisol — is a window
+            where early action can prevent or reduce the severity of an attack.
+          </p>
+          <p class="cs-body reveal d3">
+            This project began personally. I've had migraines since I was a
+            teenager and always noticed small signs hours before — a stiffness
+            in the neck, an unusual sensitivity to light, a drop in focus that
+            felt different from tiredness. I wanted to build something that
+            could read those signs so I didn't have to consciously track them.
+            Lumi is the result: a wearable biosensor and companion app designed
+            to detect the prodrome window and give you time to act.
+          </p>
+        </div>
+        <div class="cs-stats reveal d2">
+          <div class="cs-stat">
+            <div class="cs-stat-val">3.25×</div>
+            <div class="cs-stat-label">more likely in women</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-val">1B+</div>
+            <div class="cs-stat-label">people affected globally</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-val">4–72h</div>
+            <div class="cs-stat-label">prodrome window before onset</div>
+          </div>
+          <div class="cs-stat">
+            <div class="cs-stat-val">#4</div>
+            <div class="cs-stat-label">
+              leading cause of disability worldwide
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="cs-section">
+      <div class="cs-section-inner">
+        <div class="cs-label reveal">02 — Process</div>
+        <h2 class="cs-heading reveal d1">
+          Designed in the browser,<br /><em>not before it.</em>
+        </h2>
+        <p class="cs-body reveal d2">
+          Most product design starts in Figma and gets handed off to engineering
+          as a static spec. Lumi started in code. Every screen was built,
+          viewed, adjusted, and rebuilt in the same environment — spacing,
+          color, motion, and copy were tuned by changing CSS and watching the
+          result update immediately, not by translating a mockup after the fact.
+        </p>
+
+        <div class="process-examples">
+          <div class="process-example reveal d2">
+            <div class="process-example__num">01</div>
+            <div class="process-example__content">
+              <h3 class="process-example__title">The signal orb</h3>
+              <p class="process-example__body">
+                Its breathing animation, color states across calm, medium, and
+                warning, and glow intensity were tuned live — dozens of small
+                iterations a static frame can't capture. The orb needed to feel
+                alive without being distracting, which only became clear by
+                watching it pulse in the actual interface.
+              </p>
+              <div class="process-example__tags">
+                <span>v1 — static circle</span>
+                <span>v2 — pulse animation</span>
+                <span>v3 — color-coded states</span>
               </div>
             </div>
           </div>
-          <div class="app-screen-label">Alert</div>
-          <div class="app-screen-sub">Early warning, action plan</div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:48px;" class="reveal d3">
-        <a href="https://lumi-wearable.vercel.app" target="_blank" class="cs-cta-btn">Open the prototype ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- DESIGN -->
-  <section id="design" class="cs-section">
-    <div class="cs-section-inner">
-      <div class="cs-label reveal">03 — Design</div>
-      <h2 class="cs-heading reveal d1">Every decision made<br><em>for the person wearing it.</em></h2>
-
-      <div class="design-cards">
-        <div class="design-card reveal d1" style="background:var(--lavender);">
-          <div class="design-card-num">01</div>
-          <h3 class="design-card-title">The clip goes where it hurts</h3>
-          <p class="design-card-body">Most biosensors assume a fixed placement — temple, wrist, earlobe. Migraine pain isn't fixed. Aura clips wherever your pain begins. The sensor reads from that specific location, personalizing detection to your anatomy rather than a population average.</p>
-        </div>
-        <div class="design-card reveal d2" style="background:var(--cream-deep);">
-          <div class="design-card-num">02</div>
-          <h3 class="design-card-title">Calm technology</h3>
-          <p class="design-card-body">Lumi is designed not to demand attention. The signal orb communicates status without numbers unless you look closely. Alerts are gentle, not alarming. The app is something you glance at, not something you monitor — it works in the background so you don't have to.</p>
-        </div>
-        <div class="design-card reveal d3" style="background:var(--blush);">
-          <div class="design-card-num">03</div>
-          <h3 class="design-card-title">For women, by a woman</h3>
-          <p class="design-card-body">Women are 3.25× more likely to experience migraines, yet most medical wearable design uses male bodies as the default. Lumi is explicitly built for and around women's health — the cycle tracking, the hormonal trigger mapping, the language and color system all reflect this intent.</p>
-        </div>
-        <div class="design-card reveal d4" style="background:var(--mint);">
-          <div class="design-card-num">04</div>
-          <h3 class="design-card-title">Accessible by design</h3>
-          <p class="design-card-body">Not everyone can wear a hair clip. Aura is the hero form factor — but Halo exists for people with short hair, shaved heads, or sensory sensitivities around clips. Nimbus exists for people who need a fully invisible, skin-contact option. The three devices share the same sensor core. The choice of form factor is never a compromise on capability — it's a recognition that bodies are different and wearable health technology should work for all of them.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HARDWARE -->
-  <section id="hardware" class="cs-section cs-section--tinted">
-    <div class="cs-section-inner">
-      <div class="cs-label reveal">04 — Hardware</div>
-      <h2 class="cs-heading reveal d1">Three form factors.<br><em>One sensor core.</em></h2>
-      <p class="cs-body reveal d2">Lumi is a design concept — the wearable hardware has not been manufactured yet. The form factors, sensor placement, and material choices are grounded in research into HRV monitoring and EEG sensor placement. I'd be delighted to find engineers, hardware makers, and medical device designers to bring this to life.</p>
-
-      <div class="hardware-grid">
-        <div class="hardware-card reveal d1">
-          <div class="hardware-img-wrap" style="background:#F0EBFF;">
-            <img src="assets/aura2.png" alt="Aura hair clip concept render" class="hardware-img hardware-img--contain">
+          <div class="process-example reveal d3">
+            <div class="process-example__num">02</div>
+            <div class="process-example__content">
+              <h3 class="process-example__title">The alert flow</h3>
+              <p class="process-example__body">
+                The progress bar, micro-interactions on each action item, and
+                the success state were designed through interaction, not as
+                separate static screens. Each tap needed to feel responsive — a
+                scale animation, a confirmation label, a progress bar that fills
+                — before the full "all done" state made sense.
+              </p>
+              <div class="process-example__tags">
+                <span>v1 — simple checkbox</span>
+                <span>v2 — scale + confirm text</span>
+                <span>v3 — progress bar + success screen</span>
+              </div>
+            </div>
           </div>
-          <div class="hardware-info">
-            <div class="hardware-name">Aura <span class="hardware-badge">Hero</span></div>
-            <div class="hardware-type">Hair clip — concept render</div>
-            <p class="hardware-desc">Clips wherever your pain begins. Spring-loaded steel hinge, lavender shell, optical HRV sensor and temperature array in a 48mm body.</p>
-          </div>
-        </div>
-        <div class="hardware-card reveal d2">
-          <div class="hardware-img-wrap" style="background:#FFF0F5;">
-            <img src="assets/halo.png" alt="Halo headband concept render" class="hardware-img hardware-img--contain">
-          </div>
-          <div class="hardware-info">
-            <div class="hardware-name">Halo</div>
-            <div class="hardware-type">Headband — concept render</div>
-            <p class="hardware-desc">Soft silicone loop in blush. Sensor node sits at the temple. For those who prefer a hands-free, all-day wearable over a clip.</p>
-          </div>
-        </div>
-        <div class="hardware-card reveal d3">
-          <div class="hardware-img-wrap" style="background:#EDFAF5;">
-            <img src="assets/nimbus3.png" alt="Nimbus patch concept render" class="hardware-img hardware-img--contain">
-          </div>
-          <div class="hardware-info">
-            <div class="hardware-name">Nimbus</div>
-            <div class="hardware-type">Adhesive patch — concept render</div>
-            <p class="hardware-desc">A flower-shaped mint patch that adheres directly to skin. Peel tab for easy placement, designed for overnight or post-exercise monitoring.</p>
+          <div class="process-example reveal d4">
+            <div class="process-example__num">03</div>
+            <div class="process-example__content">
+              <h3 class="process-example__title">The patterns calendar</h3>
+              <p class="process-example__body">
+                An entirely interaction-driven feature that wouldn't exist as a
+                static design — it only makes sense once you can tap two days
+                and see their data compared side by side. This came directly out
+                of asking "what would make this calendar actually useful, not
+                just decorative."
+              </p>
+              <div class="process-example__tags">
+                <span>v1 — static calendar grid</span>
+                <span>v2 — tap to select days</span>
+                <span>v3 — live comparison panel</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hardware-exploded reveal d2">
-        <img src="assets/aura.png" alt="Aura exploded view" class="hardware-exploded-img">
-        <div class="hardware-exploded-caption">Aura — exploded view showing lavender shell, sensor array, processor chip, CR2032 holder, and spring mechanism</div>
+    <!-- APP -->
+    <section id="app" class="cs-section cs-section--dark">
+      <div class="cs-section-inner">
+        <div class="cs-label reveal" style="color: rgba(255, 255, 255, 0.35)">
+          03 — App
+        </div>
+        <h2
+          class="cs-heading reveal d1"
+          style="color: rgba(255, 255, 255, 0.95)"
+        >
+          A companion app that reads<br /><em>what you can't.</em>
+        </h2>
+        <p class="cs-body reveal d2" style="color: rgba(255, 255, 255, 0.5)">
+          The Lumi app connects to your Aura clip via Bluetooth and translates
+          raw biosensor data into a single, calm signal. No overwhelming
+          dashboards — just a clear picture of where you are and what to do if
+          the signal rises.
+        </p>
+
+        <div class="app-embed">
+          <div class="app-embed__frame reveal d2">
+            <div class="app-embed__iframe-wrap">
+              <iframe
+                src="https://lumi-wearable.vercel.app"
+                title="Lumi app prototype"
+                class="app-embed__iframe"
+                scrolling="no"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="app-embed__info reveal d3">
+            <div class="app-embed__tag">live prototype</div>
+            <h3 class="app-embed__title">Try it yourself</h3>
+            <p class="app-embed__body">
+              Tap through the full flow — onboarding, dashboard, early warning
+              alert, patterns calendar, and log. Built in React + TypeScript.
+            </p>
+            <div class="app-embed__stack">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Vite</span>
+              <span>Vercel</span>
+            </div>
+            <a
+              href="https://lumi-wearable.vercel.app"
+              target="_blank"
+              class="cs-cta-btn"
+              style="display: inline-block; margin-top: 24px"
+              >Open in new tab ↗</a
+            >
+          </div>
+        </div>
       </div>
-      <div class="concept-note reveal d3">
-        <span class="concept-note-icon">✦</span>
-        All device renders are speculative design concepts. The Lumi wearable hardware has not been manufactured. Form factors and sensor specifications are grounded in published research but do not represent a real product. If you're a hardware engineer or medical device designer interested in building this — <a href="mailto:yafira@nyu.edu">let's talk.</a>
+    </section>
+    <!-- DESIGN -->
+    <section id="design" class="cs-section">
+      <div class="cs-section-inner">
+        <div class="cs-label reveal">04 — Design</div>
+        <h2 class="cs-heading reveal d1">
+          Every decision made<br /><em>for the person wearing it.</em>
+        </h2>
+
+        <div class="design-cards">
+          <div
+            class="design-card reveal d1"
+            style="background: var(--lavender)"
+          >
+            <div class="design-card-num">01</div>
+            <h3 class="design-card-title">The clip goes where it hurts</h3>
+            <p class="design-card-body">
+              Most biosensors assume a fixed placement — temple, wrist, earlobe.
+              Migraine pain isn't fixed. Aura clips wherever your pain begins.
+              The sensor reads from that specific location, personalizing
+              detection to your anatomy rather than a population average.
+            </p>
+          </div>
+          <div
+            class="design-card reveal d2"
+            style="background: var(--cream-deep)"
+          >
+            <div class="design-card-num">02</div>
+            <h3 class="design-card-title">Calm technology</h3>
+            <p class="design-card-body">
+              Lumi is designed not to demand attention. The signal orb
+              communicates status without numbers unless you look closely.
+              Alerts are gentle, not alarming. The app is something you glance
+              at, not something you monitor — it works in the background so you
+              don't have to.
+            </p>
+          </div>
+          <div class="design-card reveal d3" style="background: var(--blush)">
+            <div class="design-card-num">03</div>
+            <h3 class="design-card-title">For women, by a woman</h3>
+            <p class="design-card-body">
+              Women are 3.25× more likely to experience migraines, yet most
+              medical wearable design uses male bodies as the default. Lumi is
+              explicitly built for and around women's health — the cycle
+              tracking, the hormonal trigger mapping, the language and color
+              system all reflect this intent.
+            </p>
+          </div>
+          <div class="design-card reveal d4" style="background: var(--mint)">
+            <div class="design-card-num">04</div>
+            <h3 class="design-card-title">Accessible by design</h3>
+            <p class="design-card-body">
+              Not everyone can wear a hair clip. Aura is the hero form factor —
+              but Halo exists for people with short hair, shaved heads, or
+              sensory sensitivities around clips. Nimbus exists for people who
+              need a fully invisible, skin-contact option. The three devices
+              share the same sensor core. The choice of form factor is never a
+              compromise on capability — it's a recognition that bodies are
+              different and wearable health technology should work for all of
+              them.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BUILD -->
-  <section class="cs-section">
-    <div class="cs-section-inner">
-      <div class="cs-label reveal">05 — The Build</div>
-      <h2 class="cs-heading reveal d1">Designed and coded<br><em>as one unified thing.</em></h2>
-      <p class="cs-body reveal d2">The companion app is fully designed and built as a prototype — all screens, transitions, and interactions — using HTML, CSS, and vanilla JavaScript. The wearable is a design concept backed by research into biosensor hardware. Simulated biosensor data demonstrates the complete interaction model from onboarding to early warning to pattern tracking.</p>
-      <div class="build-pills reveal d2">
-        <span class="build-pill">HTML</span>
-        <span class="build-pill">CSS</span>
-        <span class="build-pill">JavaScript</span>
-        <span class="build-pill">Fraunces</span>
-        <span class="build-pill">Departure Mono</span>
-        <span class="build-pill">Lucide Icons</span>
-        <span class="build-pill">Vercel</span>
-        <span class="build-pill">Speculative Design</span>
-        <span class="build-pill">HRV Research</span>
+    <!-- HARDWARE -->
+    <section id="hardware" class="cs-section cs-section--tinted">
+      <div class="cs-section-inner">
+        <div class="cs-label reveal">05 — Hardware</div>
+        <h2 class="cs-heading reveal d1">
+          Three form factors.<br /><em>One sensor core.</em>
+        </h2>
+        <p class="cs-body reveal d2">
+          Lumi is a design concept — the wearable hardware has not been
+          manufactured yet. The form factors, sensor placement, and material
+          choices are grounded in research into HRV monitoring and EEG sensor
+          placement. I'd be delighted to find engineers, hardware makers, and
+          medical device designers to bring this to life.
+        </p>
+
+        <div class="hardware-grid">
+          <div class="hardware-card reveal d1">
+            <div class="hardware-img-wrap" style="background: #f0ebff">
+              <img
+                src="assets/aura2.png"
+                alt="Aura hair clip concept render"
+                class="hardware-img hardware-img--contain"
+              />
+            </div>
+            <div class="hardware-info">
+              <div class="hardware-name">
+                Aura <span class="hardware-badge">Hero</span>
+              </div>
+              <div class="hardware-type">Hair clip — concept render</div>
+              <p class="hardware-desc">
+                Clips wherever your pain begins. Spring-loaded steel hinge,
+                lavender shell, optical HRV sensor and temperature array in a
+                48mm body.
+              </p>
+            </div>
+          </div>
+          <div class="hardware-card reveal d2">
+            <div class="hardware-img-wrap" style="background: #fff0f5">
+              <img
+                src="assets/halo.png"
+                alt="Halo headband concept render"
+                class="hardware-img hardware-img--contain"
+              />
+            </div>
+            <div class="hardware-info">
+              <div class="hardware-name">Halo</div>
+              <div class="hardware-type">Headband — concept render</div>
+              <p class="hardware-desc">
+                Soft silicone loop in blush. Sensor node sits at the temple. For
+                those who prefer a hands-free, all-day wearable over a clip.
+              </p>
+            </div>
+          </div>
+          <div class="hardware-card reveal d3">
+            <div class="hardware-img-wrap" style="background: #edfaf5">
+              <img
+                src="assets/nimbus3.png"
+                alt="Nimbus patch concept render"
+                class="hardware-img hardware-img--contain"
+              />
+            </div>
+            <div class="hardware-info">
+              <div class="hardware-name">Nimbus</div>
+              <div class="hardware-type">Adhesive patch — concept render</div>
+              <p class="hardware-desc">
+                A flower-shaped mint patch that adheres directly to skin. Peel
+                tab for easy placement, designed for overnight or post-exercise
+                monitoring.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hardware-exploded reveal d2">
+          <img
+            src="assets/aura.png"
+            alt="Aura exploded view"
+            class="hardware-exploded-img"
+          />
+          <div class="hardware-exploded-caption">
+            Aura — exploded view showing lavender shell, sensor array, processor
+            chip, CR2032 holder, and spring mechanism
+          </div>
+        </div>
+        <div class="concept-note reveal d3">
+          <span class="concept-note-icon">✦</span>
+          All device renders are speculative design concepts. The Lumi wearable
+          hardware has not been manufactured. Form factors and sensor
+          specifications are grounded in published research but do not represent
+          a real product. If you're a hardware engineer or medical device
+          designer interested in building this —
+          <a href="mailto:yafira@nyu.edu">let's talk.</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cs-cta">
-    <div class="cs-cta-inner">
-      <div class="cs-label reveal" style="color:rgba(255,255,255,0.3);">Lumi, 2026</div>
-      <h2 class="cs-cta-heading reveal d1">Try the prototype.<br><em>Your body knows before you do.</em></h2>
-      <div class="cs-cta-actions reveal d2">
-        <a href="https://lumi-wearable.vercel.app" target="_blank" class="cs-cta-btn cs-cta-btn--light">Open the app ↗</a>
-        <a href="https://github.com/electrocutelab" target="_blank" class="cs-cta-btn cs-cta-btn--ghost">GitHub ↗</a>
+    <!-- BUILD -->
+    <section class="cs-section">
+      <div class="cs-section-inner">
+        <div class="cs-label reveal">06 — The Build</div>
+        <h2 class="cs-heading reveal d1">
+          Designed and coded<br /><em>as one unified thing.</em>
+        </h2>
+        <p class="cs-body reveal d2">
+          The companion app is fully designed and built as a prototype — all
+          screens, transitions, and interactions — using HTML, CSS, and vanilla
+          JavaScript. The wearable is a design concept backed by research into
+          biosensor hardware. Simulated biosensor data demonstrates the complete
+          interaction model from onboarding to early warning to pattern
+          tracking.
+        </p>
+        <div class="build-pills reveal d2">
+          <span class="build-pill">HTML</span>
+          <span class="build-pill">CSS</span>
+          <span class="build-pill">JavaScript</span>
+          <span class="build-pill">Fraunces</span>
+          <span class="build-pill">Departure Mono</span>
+          <span class="build-pill">Lucide Icons</span>
+          <span class="build-pill">Vercel</span>
+          <span class="build-pill">Speculative Design</span>
+          <span class="build-pill">HRV Research</span>
+        </div>
       </div>
-      <div class="cs-cta-credit reveal d3">A project by <a href="https://yafira.xyz" target="_blank">Yafira Martinez</a> — NYU ITP, 2026</div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SOURCES -->
-  <section class="cs-sources">
-    <div class="cs-sources-inner">
-      <div class="cs-sources-label">Sources</div>
-      <ol class="cs-sources-list">
-        <li>Vetvik, K.G. & MacGregor, E.A. (2017). Sex differences in the epidemiology, clinical features, and pathophysiology of migraine. <em>The Lancet Neurology</em>, 16(1), 76–87. <span class="source-note">— basis for the 3.25× figure</span></li>
-        <li>GBD 2016 Disease and Injury Incidence and Prevalence Collaborators. (2017). Global, regional, and national incidence, prevalence, and years lived with disability for 328 diseases and injuries. <em>The Lancet</em>, 390(10100), 1211–1259. <span class="source-note">— basis for the 1 billion figure and #4 disability ranking</span></li>
-        <li>Giffin, N.J. et al. (2003). Premonitory symptoms in migraine: An electronic diary study. <em>Neurology</em>, 60(6), 935–940. <span class="source-note">— basis for the prodrome window (4–72 hours before onset)</span></li>
-        <li>Shaffer, F. & Ginsberg, J.P. (2017). An overview of heart rate variability metrics and norms. <em>Frontiers in Public Health</em>, 5, 258. <span class="source-note">— basis for HRV as a biosensor signal</span></li>
-        <li>Peroutka, S.J. (2014). Migraine: A chronic sympathetic nervous system disorder. <em>Headache</em>, 44(1), 53–64. <span class="source-note">— basis for cortisol and temperature as prodrome markers</span></li>
-      </ol>
-    </div>
-  </section>
+    <!-- CTA -->
+    <section class="cs-cta">
+      <div class="cs-cta-inner">
+        <div class="cs-label reveal" style="color: rgba(255, 255, 255, 0.3)">
+          Lumi, 2026
+        </div>
+        <h2 class="cs-cta-heading reveal d1">
+          Try the prototype.<br /><em>Your body knows before you do.</em>
+        </h2>
+        <div class="cs-cta-actions reveal d2">
+          <a
+            href="https://lumi-wearable.vercel.app"
+            target="_blank"
+            class="cs-cta-btn cs-cta-btn--light"
+            >Open the app ↗</a
+          >
+          <a
+            href="https://github.com/electrocutelab"
+            target="_blank"
+            class="cs-cta-btn cs-cta-btn--ghost"
+            >GitHub ↗</a
+          >
+        </div>
+        <div class="cs-cta-credit reveal d3">
+          A project by
+          <a href="https://yafira.xyz" target="_blank">Yafira Martinez</a> — NYU
+          ITP, 2026
+        </div>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- SOURCES -->
+    <section class="cs-sources">
+      <div class="cs-sources-inner">
+        <div class="cs-sources-label">Sources</div>
+        <ol class="cs-sources-list">
+          <li>
+            Vetvik, K.G. & MacGregor, E.A. (2017). Sex differences in the
+            epidemiology, clinical features, and pathophysiology of migraine.
+            <em>The Lancet Neurology</em>, 16(1), 76–87.
+            <span class="source-note">— basis for the 3.25× figure</span>
+          </li>
+          <li>
+            GBD 2016 Disease and Injury Incidence and Prevalence Collaborators.
+            (2017). Global, regional, and national incidence, prevalence, and
+            years lived with disability for 328 diseases and injuries.
+            <em>The Lancet</em>, 390(10100), 1211–1259.
+            <span class="source-note"
+              >— basis for the 1 billion figure and #4 disability ranking</span
+            >
+          </li>
+          <li>
+            Giffin, N.J. et al. (2003). Premonitory symptoms in migraine: An
+            electronic diary study. <em>Neurology</em>, 60(6), 935–940.
+            <span class="source-note"
+              >— basis for the prodrome window (4–72 hours before onset)</span
+            >
+          </li>
+          <li>
+            Shaffer, F. & Ginsberg, J.P. (2017). An overview of heart rate
+            variability metrics and norms. <em>Frontiers in Public Health</em>,
+            5, 258.
+            <span class="source-note"
+              >— basis for HRV as a biosensor signal</span
+            >
+          </li>
+          <li>
+            Peroutka, S.J. (2014). Migraine: A chronic sympathetic nervous
+            system disorder. <em>Headache</em>, 44(1), 53–64.
+            <span class="source-note"
+              >— basis for cortisol and temperature as prodrome markers</span
+            >
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
