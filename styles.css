@@ -763,6 +763,23 @@ nav.scrolled {
   margin-top: 16px;
 }
 
+.hardware-inuse {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.hardware-inuse-img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+.hardware-inuse-caption {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: var(--grey-light);
+  letter-spacing: 0.08em;
+  margin-top: 16px;
+}
+
 /* BUILD */
 .build-pills {
   display: flex;
