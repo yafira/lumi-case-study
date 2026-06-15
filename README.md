@@ -84,6 +84,6 @@ Key design principles:
 
 ## About
 
-A project by [Yafira Martinez](https://yafira.xyz)
+A design engineering project by [Yafira Martinez](https://yafira.xyz)
 
 [Case Study](https://lumi-case-study.vercel.app) · [Portfolio](https://yafira.xyz) · [Contact](mailto:yafira@proton.me)
