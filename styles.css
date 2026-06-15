@@ -356,10 +356,23 @@ nav {
 @media (max-width: 768px) {
   nav {
     padding: 0 24px;
+    height: 56px;
+    min-height: 56px;
+  }
+  .nav-right {
+    gap: 0;
+  }
+  .nav-right a:not(.live) {
+    display: none;
+  }
+  .nav-right a.live {
+    font-size: 9px;
   }
   .hero {
-    padding: 100px 24px 60px;
+    padding: 120px 24px 60px;
     grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 24px;
   }
   .hero-phone,
   .hero-wearable {
@@ -839,6 +852,16 @@ nav.scrolled {
   }
   .cs-cta {
     padding: 80px 24px;
+  }
+  .cs-cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .cs-cta-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 }
 
